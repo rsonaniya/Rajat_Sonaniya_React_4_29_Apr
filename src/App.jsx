@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import AllPosts from "./Components/AllPosts";
 import PostDetailPage from "./Components/PostDetailPage";
+import NotFound from "./Components/NotFound";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Routes>
         <Route path="" element={<AllPosts />} />
         <Route path="Post/:id" element={<PostDetailPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
